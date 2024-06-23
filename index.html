@@ -2,124 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASTERISC COMPUTER INSTITUTE FEES 2024 - 25</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Enter Email ID</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
-    <div id="loader"> Loading...
-    </div>
-    <table class="fee-table">
-        <thead>
-            <tr>
-                <th colspan="55">
-                    <h1>ASTERISC COMPUTER INSTITUTE FEES 2024 -25</h1>
-                </th>
-            </tr>
-            <tr>
-                <th>Sr. No.</th>
-                <th>WA</th>
-                <th>STUDENT NAME</th>
-                <th>MOBILE STUDENT</th>
-                <th>Admission DATE</th>
-                <th>TOTAL FEES PAID</th>
-                <th>REMAINING FEES</th>
-                <th>JANUARY</th>
-                <th colspan="2"></th>
-                <th>FEBRUARY</th>
-                <th colspan="2"></th>
-                <th>MARCH</th>
-                <th colspan="2"></th>
-                <th>APRIL</th>
-                <th colspan="2"></th>
-                <th>MAY</th>
-                <th colspan="2"></th>
-                <th>JUNE</th>
-                <th colspan="2"></th>
-                <th>JULY</th>
-                <th colspan="2"></th>
-                <th>AUGUST</th>
-                <th colspan="2"></th>
-                <th>SEPTEMBER</th>
-                <th colspan="2"></th>
-                <th>OCTOBER</th>
-                <th colspan="2"></th>
-                <th>NOVEMBER</th>
-                <th colspan="2"></th>
-                <th>DECEMBER</th>
-                <th colspan="2"></th>
-                <th>FINE CHARGES</th>
-                <th>Installment</th>
-                <th>TOTAL FEES</th>
-                <th>ADMISSION FEES</th>
-                <th>MONTHLY FEES</th>
-                <th>BRANCH</th>
-                <th>COURSE</th>
-                <th>TRAINER Mail ID</th>
-                <th>Mail Sent</th>
-                <th>MAIL ID</th>
-                <th>Branch</th>
-                <th colspan="2"></th>
-            </tr>
-        </thead>
-        <tbody id="MyTBody">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td>DATE</td>
-                <td>AMOUNT</td>
-                <td>MODE</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <div class="container">
+    <form id="emailForm">
+        <label for="email">Enter Email ID:</label>
+        <input type="email" id="email" placeholder="Enter email.." >
+        <button type="button" onclick="fetchData()">Get Data</button>
+    </form>
+</div>
+
+    <script>
+        function fetchData() {
+            var emailId = document.getElementById('email').value;
+
+            // Redirect to index.html with emailId as URL parameter
+            window.location.href = 'index.html?email=' + encodeURIComponent(emailId);
+        }
+    </script>
 </body>
 </html>
