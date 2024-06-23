@@ -1,0 +1,155 @@
+/* Reset and basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Styling for the header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #580f5a;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+/* Styling for the table */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Prevents horizontal scrollbars */
+}
+
+.fee-table th, .fee-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.fee-table th {
+    background-color: #99c59a; /* Green background */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.fee-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+/* Alternate row color */
+.fee-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Hover effect for table rows */
+.fee-table tbody tr:hover {
+    background-color: #e0f7fa; /* Light blue hover background */
+    transform: scale(1.01); /* Slight scale effect on hover */
+    transition: transform 0.2s ease;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .fee-table {
+        overflow-x: auto;
+    }
+}
+
+/* Additional styling for specific columns */
+.fee-table th:nth-child(1),
+.fee-table td:nth-child(1) {
+    width: 50px;
+}
+
+.fee-table th:nth-child(2),
+.fee-table td:nth-child(2) {
+    min-width: 150px;
+}
+
+.fee-table th:nth-child(3),
+.fee-table td:nth-child(3) {
+    min-width: 120px;
+}
+
+/* Example of styling installment columns */
+.fee-table th:nth-child(8),
+.fee-table td:nth-child(8),
+.fee-table th:nth-child(10),
+.fee-table td:nth-child(10),
+.fee-table th:nth-child(12),
+.fee-table td:nth-child(12),
+.fee-table th:nth-child(14),
+.fee-table td:nth-child(14),
+.fee-table th:nth-child(16),
+.fee-table td:nth-child(16),
+.fee-table th:nth-child(18),
+.fee-table td:nth-child(18),
+.fee-table th:nth-child(20),
+.fee-table td:nth-child(20),
+.fee-table th:nth-child(22),
+.fee-table td:nth-child(22),
+.fee-table th:nth-child(24),
+.fee-table td:nth-child(24),
+.fee-table th:nth-child(26),
+.fee-table td:nth-child(26),
+.fee-table th:nth-child(28),
+.fee-table td:nth-child(28),
+.fee-table th:nth-child(30),
+.fee-table td:nth-child(30),
+.fee-table th:nth-child(32),
+.fee-table td:nth-child(32),
+.fee-table th:nth-child(34),
+.fee-table td:nth-child(34),
+.fee-table th:nth-child(36),
+.fee-table td:nth-child(36),
+.fee-table th:nth-child(38),
+.fee-table td:nth-child(38),
+.fee-table th:nth-child(40),
+.fee-table td:nth-child(40),
+.fee-table th:nth-child(42),
+.fee-table td:nth-child(42),
+.fee-table th:nth-child(44),
+.fee-table td:nth-child(44),
+.fee-table th:nth-child(46),
+.fee-table td:nth-child(46),
+.fee-table th:nth-child(48),
+.fee-table td:nth-child(48),
+.fee-table th:nth-child(50),
+.fee-table td:nth-child(50),
+.fee-table th:nth-child(52),
+.fee-table td:nth-child(52),
+.fee-table th:nth-child(54),
+.fee-table td:nth-child(54){
+    min-width: 100px;
+}
+
+
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* semi-transparent white background */
+    display: none; /* hide initially */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 999; /* ensure it's above other content */
+}
+
+/* Add any additional styling for your table if needed */
