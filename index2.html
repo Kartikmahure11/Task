@@ -16,11 +16,26 @@
         }
 
         .paid {
-            color: rgb(109, 217, 62);
+            background-color: #34C759; /* Green background */
+            color: #fff; /* White text */
+            padding: 5px 5px;
+            border-radius: 5px;
+            
         }
         
         .late {
-            color: #333;
+            background-color: #f61616; /* Red background */
+            color: #fff; /* White text */
+            padding: 5px 5px;
+            border-radius: 5px;
+            
+        }
+
+        .make{
+            background-color: #0696f6; /* Red background */
+            color: #fff; /* White text */
+            padding: 5px 5px;
+            border-radius: 5px;
         }
         .container {
             display: none;
@@ -68,6 +83,20 @@
             justify-content: center;
             padding-bottom: 8px;
             border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+            position: relative; /* Add this to allow absolute positioning of the design element */
+          }
+          
+          .card:after {
+            content: ""; /* Required for :after pseudo-element */
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px; /* Adjust the width to your liking */
+            height: 100%;
+            background-image: url("https://themewagon.github.io/purple-react/static/media/circle.953c9ca0.svg"); /* Replace with your design image */
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
           }
           
           .card:nth-child(1) {
@@ -178,13 +207,13 @@
   }
   
   .payment-link {
-    color: #0696f6; /* Blue link color */
+    color: #fff; /* Blue link color */
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .payment-link:hover {
-    color: #217dbb; /* Darker blue link color on hover */
+    color: #fff; /* Darker blue link color on hover */
     text-decoration: underline;
   }
   
@@ -339,9 +368,9 @@
                     } else {
                         var dashboardContent = `
                             <div class="header">
-                                <h1>ASTERISC GROUP</h1>
+                                <h1 style="text-transform: uppercase">Asterisc Group</h1>
                             </div>
-                            <div class="title"><h2>STUDENT DASHBOARD</h2></div>
+                            <div class="title"><h2 style="text-transform: uppercase">Student Dashboard</h2></div>
                             <div class="content">
                                 <div class="card">
                                     <div class="field"><span><b>Name:</b></span><br> ${data.studentName}</div>
@@ -381,23 +410,23 @@
 
                         months.forEach(function (month, index) {
                             var monthData = data.months[month];
-                            var receipt = '-';
-                            var remark = '-';
+                            var receipt = '<p style="color: #2c3e50">-<p>';
+                            var remark = '<p style="color: #2c3e50">-<p>';
                         
                             if (monthData && monthData.amount) {
                                 if (index < currentMonth) {
                                     if (monthData.mode === 'Online' || monthData.mode === 'Cash') {
-                                        remark = 'Paid &#10004;';
-                                        receipt = '<a class="payment-link" href="#">View Receipt</a>';
+                                        remark = '<span class="paid">Paid &#10004;</span>';
+                                        receipt = '<a class="payment-link" style="color: #0696f6" href="#">View Receipt</a>';
                                     } else {
-                                        remark = 'Late';
+                                        remark = '<span class="late">Late</span>';
                                     }
                                 } else if (index === currentMonth) {
                                     if (monthData.mode === 'Online' || monthData.mode === 'Cash') {
                                         remark = 'Paid &#10004;';
-                                        receipt = '<a class="payment-link" href="#">View Receipt</a>';
+                                        receipt = '<a class="payment-link" style="color: #0696f6" href="#">View Receipt</a>';
                                     } else {
-                                        remark = '<a class="payment-link" href="#">Make Payment</a>';
+                                        remark = '<span class="make"><a class="payment-link" href="#">Make Payment</a></span>';
                                     }
                                 }
                         
