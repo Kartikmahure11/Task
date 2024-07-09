@@ -137,7 +137,7 @@
           }
 
         .field {
-            margin-bottom: 15px;
+            margin-bottom: 2%;
             font-size: 16px;
             color: #100101; /* Dark gray text */
         }
@@ -366,7 +366,7 @@
             $('#loading').show();
 
             if (emailId) {
-                $.getJSON("https://script.google.com/macros/s/AKfycbwtkHFL844GxbWV2YLDGnFCo8gHmilkmOnQ8XeY4U2eCde4lXpGRZVRWON9aQbzvVQW/exec?emailId=" + encodeURIComponent(emailId), function (data) {
+                $.getJSON("https://script.google.com/macros/s/AKfycbydYMoC81LgjAvEVGojSjrbD2MgCm5KkZt4TP7vyko8CImhw-vLRk_1Q9pzJg_LfunV/exec?emailId=" + encodeURIComponent(emailId), function (data) {
                     if (data.error) {
                         $('#dashboard').html('<p>' + data.error + '</p>');
                     } else {
